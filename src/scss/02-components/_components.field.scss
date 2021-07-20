@@ -1,0 +1,50 @@
+.user-field {
+  &__wrapper {
+    margin: 20px;
+    padding: 20px;
+    background-color: #F7F7F7;
+  }
+
+  &__display-name {
+    padding: 10px 0;
+    color: #536EB7;
+    text-transform: uppercase;
+  }
+
+  &__display-value {
+    display: flex;
+    flex-direction: column;
+    padding: 10px 0;
+    word-break: break-word;
+
+    &--current {
+      flex: 1 0 100%;
+      margin-top: 10px;
+    }
+  }
+
+  &__update {
+    margin-top: 10px;
+
+    label {
+      margin-right: 10px;
+      text-transform: capitalize;
+    }
+
+    input {
+      padding: 20px 15px;
+    }
+
+    input:not([type="radio"]),
+    textarea {
+      margin-top: 10px;
+      display: block;
+      width: 90%;
+    }
+
+    textarea {
+      padding: 20px 15px;
+      min-height: 200px;
+    }
+  }
+}
