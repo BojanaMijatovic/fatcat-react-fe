@@ -1,4 +1,4 @@
-export default [
+const userData =  [
   {
     "id": "4640a713-4b85-4c2a-9239-e8dcb326fac3",
     "isActive": true,
@@ -33,4 +33,6 @@ export default [
     "registered": "2015-05-08T12:39:06 -02:00"
   }
 ]
+
+export default userData;
 
