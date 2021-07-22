@@ -6,7 +6,6 @@ import { editField } from '../redux/userSlice';
 // import { handleChange } from './Helpers';
 
 const Field = React.memo((props: {index: number, userId: string, name: string, value: string | number | undefined}) => {
-	// const [property, dispatch] = React.useReducer(editField, initialState);
 	const [property, setProperty] = React.useState(props.value);
 
 	const dispatch = useDispatch();
@@ -28,18 +27,6 @@ const Field = React.memo((props: {index: number, userId: string, name: string, v
 			})
 		);
 	};
-
-	// const handleBlur = React.useMemo(() => (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement> | React.MouseEvent<HTMLInputElement, MouseEvent>) => {
-	// 	const { value }: { value: string | number | undefined } = e.currentTarget;
-	//
-	// 	dispatch(
-	// 		editField({
-	// 			id: props.userId,
-	// 			fieldName: props.name,
-	// 			value,
-	// 		})
-	// 	);
-	// }, [property]);
 
 	let type = '';
 	let field;
@@ -161,4 +148,4 @@ const Field = React.memo((props: {index: number, userId: string, name: string, v
 	);
 });
 
-export default React.memo(Field);
+export default Field;
