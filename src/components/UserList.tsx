@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { User } from './User';
 import { useSelector } from 'react-redux';
-import { RootState } from '../redux/store';
+import type { RootState } from '../redux/store';
 
 const UserList: React.FC = () => {
 	const userData = useSelector((state: RootState) => state.users);

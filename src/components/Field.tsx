@@ -200,7 +200,6 @@ class Field extends React.Component <{
 					<div className="user-field__display-name">{value || value === 'false' ? name : `Please enter ${name}`}</div>
 					<div className="user-field__display-value">
 						Current value:
-						{/* eslint-disable-next-line react/destructuring-assignment */}
 						<div className="user-field__display-value--current">{value ? value.toString() : null}</div>
 					</div>
 				</div>
