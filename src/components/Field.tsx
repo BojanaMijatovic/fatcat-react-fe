@@ -17,14 +17,6 @@ class Field extends React.Component <{
 			name: props.value,
 		};
 	}
-	// // eslint-disable-next-line react/state-in-constructor
-	// state = {
-	// 	// eslint-disable-next-line react/destructuring-assignment
-	// 	value: this.props.value,
-	// 	// eslint-disable-next-line react/destructuring-assignment
-	// 	name: this.props.name,
-	//
-	// }
 
 	handleBlur(e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement> | React.MouseEvent<HTMLInputElement, MouseEvent>): void {
 		const { value } = e.currentTarget;
