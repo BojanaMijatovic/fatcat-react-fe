@@ -2,12 +2,12 @@
   &__wrapper {
     margin: 20px;
     padding: 20px;
-    background-color: #F7F7F7;
+    background-color: $field-background;
   }
 
   &__display-name {
     padding: 10px 0;
-    color: #536EB7;
+    color: $field-name;
     text-transform: uppercase;
   }
 
