@@ -8,17 +8,23 @@ class Field extends React.Component <{
 	userId: string,
 	name: string,
 	value: any,
-	// eslint-disable-next-line @typescript-eslint/ban-types
-	editField: Function
+	editField: any
 }, any> {
-	// eslint-disable-next-line react/state-in-constructor
-	state = {
-		// eslint-disable-next-line react/destructuring-assignment
-		value: this.props.value,
-		// eslint-disable-next-line react/destructuring-assignment
-		name: this.props.name,
-
+	constructor(props: any) {
+		super(props);
+		this.state = {
+			value: props.value,
+			name: props.value,
+		};
 	}
+	// // eslint-disable-next-line react/state-in-constructor
+	// state = {
+	// 	// eslint-disable-next-line react/destructuring-assignment
+	// 	value: this.props.value,
+	// 	// eslint-disable-next-line react/destructuring-assignment
+	// 	name: this.props.name,
+	//
+	// }
 
 	handleBlur(e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement> | React.MouseEvent<HTMLInputElement, MouseEvent>): void {
 		const { value } = e.currentTarget;
@@ -194,16 +200,16 @@ class Field extends React.Component <{
 
 	render() {
 		const field = this.createField();
+		const { value, name } = this.state;
 
 		return (
 			<div className="user-field__wrapper">
 				<div className="user-field__display">
-					{/* eslint-disable-next-line react/destructuring-assignment */}
-					<div className="user-field__display-name">{this.state.value || this.state.value === 'false' ? this.state.name : `Please enter ${this.state.name}`}</div>
+					<div className="user-field__display-name">{value || value === 'false' ? name : `Please enter ${name}`}</div>
 					<div className="user-field__display-value">
 						Current value:
 						{/* eslint-disable-next-line react/destructuring-assignment */}
-						<div className="user-field__display-value--current">{this.state.value ? this.state.value.toString() : null}</div>
+						<div className="user-field__display-value--current">{value ? value.toString() : null}</div>
 					</div>
 				</div>
 				<div className="user-field__update">
